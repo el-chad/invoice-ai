@@ -1,0 +1,30 @@
+{
+  "invoice_number": "SYN-002",
+  "supplier_name": "Example Workshop Supply",
+  "issue_date": "2026-01-10",
+  "due_date": "2026-02-10",
+  "currency": "USD",
+  "subtotal": "200.00",
+  "tax_amount": "20.00",
+  "total": "220.00",
+  "line_items": [
+    {
+      "description": "Notebook",
+      "quantity": "3",
+      "unit_price": "10.00",
+      "amount": "30.00"
+    },
+    {
+      "description": "Desk lamp",
+      "quantity": "2",
+      "unit_price": "60.00",
+      "amount": "120.00"
+    },
+    {
+      "description": "Storage box",
+      "quantity": "1",
+      "unit_price": "50.00",
+      "amount": "50.00"
+    }
+  ]
+}

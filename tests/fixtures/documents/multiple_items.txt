@@ -1,0 +1,15 @@
+SYNTHETIC INVOICE — fictional data
+Invoice number: SYN-002
+Supplier: Example Workshop Supply
+Issue date: 2026-01-10
+Due date: 2026-02-10
+Currency: USD
+
+Description | Quantity | Unit price | Amount
+Notebook | 3 | 10.00 | 30.00
+Desk lamp | 2 | 60.00 | 120.00
+Storage box | 1 | 50.00 | 50.00
+
+Subtotal: 200.00
+Tax: 20.00
+Total: 220.00

@@ -1,0 +1,18 @@
+{
+  "invoice_number": "SYN-001",
+  "issue_date": "2026-01-10",
+  "currency": "USD",
+  "subtotal": "180.00",
+  "tax_amount": "11.00",
+  "total": "191.00",
+  "line_items": [
+    {
+      "description": "Office supply kit",
+      "quantity": "2",
+      "unit_price": "90.00",
+      "amount": "180.00"
+    }
+  ],
+  "supplier_name": null,
+  "due_date": null
+}

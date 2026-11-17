@@ -1,0 +1,13 @@
+SYNTHETIC INVOICE — fictional data
+Invoice number: SYN-001
+Supplier: Example Office Supplies
+Issue date: 2026-01-10
+Due date: 2026-02-10
+Currency: USD
+
+Description | Quantity | Unit price | Amount
+Office supply kit | 2 | 90.00 | 180.00
+
+Subtotal: 180.00
+Tax: 11.00
+Total: 119.00
