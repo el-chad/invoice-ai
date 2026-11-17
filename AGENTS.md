@@ -27,6 +27,13 @@
 - Use Ruff to format Python code consistently. Configuration lives in `pyproject.toml`: Python 3.12, an 88-character line target, double quotes, space indentation, and LF line endings. Let the formatter decide layout rather than formatting by hand.
 - No linting workflow or type checker is currently configured. Do not introduce additional tooling as part of unrelated work.
 
+## Logging
+
+- Use a module-level logger created with `logging.getLogger(__name__)`. Keep logging configuration centralized in the application entry point; do not configure handlers in routes, dependencies, or services.
+- In catch-all `except Exception` handlers, call `logger.exception` with a fixed, concise message before translating or re-raising the error. This preserves the traceback for diagnosis. At the API boundary, return a generic HTTP error and preserve the cause with `raise ... from exc`.
+- Handle expected failures explicitly. Avoid adding duplicate traceback logs at every layer when an expected service error has already been logged.
+- Keep messages free of invoice text, PDF bytes, extracted fields, credentials, and request/provider payloads. Do not interpolate exception messages or payloads into log messages; consider whether exception tracebacks themselves could expose sensitive data.
+
 ## Development commands
 
 - After completing a feature, run `uv run ruff format .`, verify with `uv run ruff format --check .`, and run `make test` before handing the work back. Report the results and any failures or checks that could not run. These checks are required even when no commit is requested.

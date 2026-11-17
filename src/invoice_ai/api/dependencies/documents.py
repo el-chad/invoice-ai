@@ -62,4 +62,5 @@ async def extract_document_invoice(text: str) -> Invoice:
     except APIError as exc:
         raise HTTPException(502, "Invoice extraction provider failed") from exc
     except Exception as exc:
+        logger.exception("Internal server error")
         raise HTTPException(500, "Internal server error") from exc
