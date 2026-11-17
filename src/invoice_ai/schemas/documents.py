@@ -7,5 +7,6 @@ class DocumentPreviewResponse(BaseModel):
     text: str
     requires_ocr: bool
 
+
 class DocumentError(BaseModel):
     detail: str
