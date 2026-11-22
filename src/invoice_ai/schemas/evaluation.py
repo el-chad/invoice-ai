@@ -1,18 +1,10 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 
 class InvoiceEvaluation(BaseModel):
-    """Field matches and independent consistency checks for a prediction.
-
-    Consistency checks are True when valid, False when invalid, and None
-    when required inputs are missing. They do not affect field accuracy.
-    Line item checks follow the prediction's line item order.
-    """
+    """Exact extraction matches against ground truth, excluding line items."""
 
     field_matches: dict[str, bool]
-    total_matches_subtotal_plus_tax: bool | None = None
-    issue_date_precedes_due_date: bool | None = None
-    line_item_amount_matches: list[bool | None] = Field(default_factory=list)
 
     @property
     def matched_fields(self) -> int:
